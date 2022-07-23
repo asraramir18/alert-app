@@ -74,10 +74,10 @@ const Alerts = () => {
             </Select>
           </FormControl>
           <Grid container spacing={2}>
-            <Grid item xs={2.5}> 
+            <Grid item xs={2.8}> 
               <AlertList isLoading={isLoading} lists={alertList} setList={setAlertList} activeCard={activeCard} setActiveCard={setActiveCard}/>
             </Grid>
-            <Grid item xs={9.5}> 
+            <Grid item xs={9.2}> 
               <AlertContent activeCardData={activeCardData}/>
             </Grid>
           </Grid>

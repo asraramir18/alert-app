@@ -14,15 +14,14 @@ const AlertCard = (props) => {
   const {
     _id, suspectedReason, Timestamp, Machine, status, Anomaly
   } = props.alertData
-  console.log('props.alertData : ', props.alertData)
 
     return (
         <Grid
           sx={{
             maxWidth: 345,
-            minWidth: 300,
+            minWidth: 286,
             m: 1.5,
-            p: 2,
+            p: 1,
             backgroundColor: '#ffffff',
             border: props.activeCard === _id ? 1 : 1,
             borderRadius: 1,
@@ -31,7 +30,7 @@ const AlertCard = (props) => {
             flexDirection: 'row'
           }}
         >
-            <CircleIcon sx={{ color: status==='new' ? '#3478FC' : 'white', fontSize: '0.9rem', mr: 1}}/>
+            <CircleIcon sx={{ color: status==='new' ? '#3478FC' : '#3478FC', fontSize: '0.9rem', mr: 1}}/>
             <Box>
               <Box sx={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
                   <Typography fontSize='0.9rem' textAlign={'left'} sx={{textTransform: 'capitalize'}}>{`ID`}</Typography>
