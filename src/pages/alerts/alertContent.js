@@ -28,9 +28,11 @@ const AlertContent = (props) => {
   const [action, setAction] = React.useState('');
   const [comment, setComment] = React.useState('');
   const [missingField, setMissingField] = React.useState(false);
-  const waveformRef = React.useRef();
 
   React.useEffect(() => {
+    setReason('') 
+    setAction('') 
+    setComment('') 
     if(props.activeCardData){
       setReason(props.activeCardData.suspectedReason) 
       setAction(props.activeCardData.action) 
@@ -49,6 +51,7 @@ const AlertContent = (props) => {
 
   const handleSubmit = async (event) => {
     if(!suspectedReason || !action || !comment){
+      event.preventDefault()
       console.log('MISSING')
       setMissingField(true)
     } else {
