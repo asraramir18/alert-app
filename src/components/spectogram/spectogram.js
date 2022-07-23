@@ -7,6 +7,7 @@ export default function Spectogram(props){
   // const waveformRef2 = useRef();
 
   useEffect(() => {
+    if(waveformRef.current) {
       const wavesurfer = WaveSurfer.create({
         container: waveformRef.current,
       });
@@ -20,7 +21,8 @@ export default function Spectogram(props){
       //   });
       // });
       wavesurfer.load(`/wav/${props.path}`);
-  }, [props.path]);
+    }
+  }, []);
   
   return(
     <Box sx={{ mt: 2 }}>
